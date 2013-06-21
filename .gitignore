@@ -1,0 +1,12 @@
+/.idea
+/.settings
+/.pmip
+/log/*
+/Config/config.php
+
+.buildpath
+.project
+.thumb
+.settings
+.project
+.buildPath
