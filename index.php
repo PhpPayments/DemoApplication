@@ -37,7 +37,9 @@ require APP_ROOT . '..' . DS . 'vendors' . DS . 'AuthorizeNetSdk' . DS . 'Author
 // Register namespaces
 $loader = new \Payment\Utility\ClassLoader('Payment', APP_ROOT . '..' . DS . 'lib');
 $loader->register();
-$loader = new \Payment\Utility\ClassLoader('Paypal', APP_ROOT . '..' . DS . 'vendors' . DS . 'PaypaylMerchantSdk' . DS . 'lib');
+$loader = new \Payment\Utility\ClassLoader('PayPal', array(
+	'PayPal', APP_ROOT . '..' . DS . 'vendors' . DS . 'PaypalCoreSdk' . DS . 'lib',
+	'PayPal', APP_ROOT . '..' . DS . 'vendors' . DS . 'PaypalMerchantSdk' . DS . 'lib'));
 $loader->register();
 
 $action = 'index';
